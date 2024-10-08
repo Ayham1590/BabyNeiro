@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c2f3e;
+    /* Dark background */
+    color: white;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: transparent;
+    /* Transparent background */
+    padding: 20px;
+    position: absolute;
+    /* Fixed position for a transparent navbar */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items horizontally */
+    padding: 60px 20px;
+    /* Add padding for hero section */
+    height: calc(100vh - 60px);
+    /* Full height minus navbar */
+}
+
+.image-container {
+    flex: 1;
+    /* Takes 1 part of the flex container */
+    display: flex;
+    justify-content: center;
+    /* Center the image */
+    align-items: center;
+    /* Center the image vertically */
+}
+
+.logo {
+    width: 100%;
+    max-width: 400px;
+    /* Adjust based on design needs */
+    height: auto;
+}
+
+.text-container {
+    flex: 2;
+    /* Takes 2 parts of the flex container */
+    display: flex;
+    flex-direction: column;
+    /* Stack text elements vertically */
+    align-items: center;
+    /* Center text horizontally */
+    justify-content: center;
+    /* Center text vertically */
+    text-align: center;
+    /* Center text in this section */
+}
+
+h2,
+h3 {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.icon {
+    width: 50px;
+    /* Adjust icon size */
+    height: 50px;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        /* Stack image and text vertically */
+        height: auto;
+        overflow-x: hidden;
+        /* Adjust height for smaller screens */
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+        /* Space below image */
+    }
+
+    .social-icons {
+        flex-direction: row;
+        /* Stack icons vertically */
+        gap: 20px;
+    }
+
+    .icon {
+        margin: 5px 0;
+        width: 40px;
+        height: 40px;
+        /* Space between icons */
+    }
+
+    .text-container {
+        padding: 0 20px;
+        /* Add padding to text container */
+    }
+
+    .logo {
+        width: 80%;
+        max-width: 400px;
+        /* Adjust based on design needs */
+        height: auto;
+    }
+
+}
